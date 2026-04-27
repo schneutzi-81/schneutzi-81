@@ -25,11 +25,12 @@ export default function Suppliers() {
   const { data: suppliers, isPending, error } = useQuery({ queryKey: ['suppliers'], queryFn: fetchSuppliers });
   const { darkMode } = useTheme();
 
+  const lowerSearch = searchTerm.toLowerCase();
   const filteredSuppliers = suppliers?.filter(
     (supplier) =>
-      supplier.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      supplier.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      supplier.contactPerson.toLowerCase().includes(searchTerm.toLowerCase()),
+      supplier.name.toLowerCase().includes(lowerSearch) ||
+      supplier.description.toLowerCase().includes(lowerSearch) ||
+      supplier.contactPerson.toLowerCase().includes(lowerSearch),
   );
 
   if (isPending) {
@@ -52,7 +53,9 @@ export default function Suppliers() {
         className={`min-h-screen ${darkMode ? 'bg-dark' : 'bg-gray-100'} pt-20 px-4 transition-colors duration-300`}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="text-red-500 text-center">Failed to fetch suppliers</div>
+          <div className="text-red-500 text-center">
+            Failed to fetch suppliers. Please check your connection and try again.
+          </div>
         </div>
       </div>
     );
