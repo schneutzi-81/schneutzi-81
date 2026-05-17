@@ -68,21 +68,6 @@ Outside pure technology, I have a strong background in ballroom dancing, coachin
 
 ---
 
-## Featured demo: OctoCAT Supply
-
-**OctoCAT Supply** is a demo application for showcasing GitHub Copilot, GitHub Advanced Security and AI-assisted development.
-
-It is useful for customer-facing demos and solution engineering conversations around:
-
-- GitHub Copilot-assisted development
-- GitHub Advanced Security
-- Full-stack TypeScript development
-- React, Express.js and SQLite
-- Docker-based development
-- MCP-based demo scenarios
-
----
-
 ## Topics I like to work on
 
 - AI adoption in real business processes
